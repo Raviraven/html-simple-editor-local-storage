@@ -28,25 +28,27 @@
 
 <body>
   <header class="site-header">
-    <h1>Hello, that's just a simple editor</h1>
+    <h1 class="site-header__header">Hello, that's just a simple editor</h1>
   </header>
 
   <main class="content">
 		<section class="container">
 			<form class="container-form" action="#">
-				<p>
-					<label for="description">Some simple description</label>
-					<textarea id="description" class="container-form__description container-form__description--js"></textarea>
+				<p class="container-form__paragraph">
+					<label for="description" class="container-form__label">Write custom description, hit save, than refresh the page and load value 😉</label>
+					<textarea id="description" class="container-form__description container-form__description--js" placeholder="Type your description here"></textarea>
 				</p>
 
-				<input class="container-form__load container-form__load--js" type="button" value="load"/>
-				<input class="container-form__save container-form__save--js" type="button" value="save"/>
+        <div class="container-form__buttons">
+				<input class="container-form__load container-form__load--js" type="button" value="Load"/>
+        <input class="container-form__save container-form__save--js" type="button" value="Save"/>
+        </div>
 			</form>
 		</section>
   </main>
 
   <footer class="footer">
-
+    <p class="footer__paragraph">Created by: MK, visit my github. 😙</p>
   </footer>
 
   <script src="js/main.js"></script>
