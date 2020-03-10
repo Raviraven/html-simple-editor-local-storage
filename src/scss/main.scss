@@ -24,6 +24,7 @@ body {
 
 .button {
   min-width: 254px;
+  min-height: 48px;
   border: none;
   border-radius: $form_fields_border_radius;
   @extend .h3;
@@ -44,23 +45,31 @@ body {
   justify-content: center;
   align-items: center;
 
+  padding: 32px;
+
   //grid-area: content;
 }
 
 .container {
   &-form {
-    //display: flex;
+    min-width: 988px;
 
     &__buttons {
       display: flex;
       justify-content: flex-end;
-      
+
       &--inputs {
         display: flex;
         justify-content: space-between;
 
-        min-height: 48px;
+        //min-height: 48px;
         min-width: 524px;
+
+        @media (max-width:$phone) {
+          flex-direction: column;
+          min-width: 150px;
+          width: 100%;
+        }
       }
     }
 
@@ -70,7 +79,6 @@ body {
 
       width: 100%;
       min-height: 272px;
-      min-width: 988px;
       border-radius: $form_fields_border_radius;
     }
 
@@ -83,12 +91,21 @@ body {
       line-height: 32px;
 
       margin-bottom: 32px;
+
+      @media (max-width: $phone){
+        font-size: 14px;
+
+      }
     }
 
     &__load {
       @extend .button;
       background-color: $ui03;
       color: $brand02;
+
+      @media (max-width:$phone) {
+        margin-bottom: 8px;
+      }
     }
 
     &__paragraph {
@@ -101,6 +118,10 @@ body {
       @extend .button;
       background-color: $ui06;
       color: $white;
+    }
+
+    @media (max-width: $tablet){
+      min-width: 0;
     }
   }
 }
@@ -143,5 +164,11 @@ body {
 
     margin-top: 64px;
     margin-left: 160px;
+
+    @media (max-width: $smaller_pc){
+      margin-left: 32px;
+      margin-right: 32px;
+      font-size: 34px;
+    }
   }
 }
