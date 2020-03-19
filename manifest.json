@@ -3,7 +3,7 @@
   "short_name": "s-editor",
   "theme_color": "#232735",
   "background_color": "#4e4e5a",
-  "display": "browser",
+  "display": "standalone",
   "Scope": "/html-simple-editor-local-storage/",
   "start_url": "/html-simple-editor-local-storage/",
   "icons": [
